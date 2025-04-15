@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="../css page/todo.css">
+</head>
+<body>
+    <div id="main_box">
+
+        <!-- Heading Centered -->
+        <h1>Create Your ToDo List for Today</h1>
+        <p>Please enter the following information</p>
+
+        <!-- Form to fill -->
+        <form id="form">
+            <div>
+                <label for="task_name">Task Name:</label><br/>
+                <input type="text" class="enter" id="task_name" name="task_name"
+                placeholder="Please enter your task here:">
+            </div><br/>
+            <div>
+                <label for="checklist">Add Up To 5 Checklists seperated by ",":</label><br/>
+                <input type="text" class="enter" id="checklist" name="checklist"
+                placeholder="Plaese enter the checklists tasks here:">
+            </div><br/>
+            <div>
+                <label for="due_to">Due To:</label><br/>
+                <input type="date" class="enter" id="due_to" name="due_to"
+                placeholder="Please enter the due to date:">
+            </div><br/>
+            <div>
+                <label for="tag">Tag:</label><br/>
+                <select name="tag" class="enter" id="tag">
+                    <option value="School/Work">School/Work</option>
+                    <option value="Health">Health</option>
+                    <option value="Exercise">Exercise</option>
+                    <option value="Creativity">Creativity</option>
+                    <option value="Family">Family</option>
+                    <option value="Chores">Chores</option>
+                    <option value="Self Care">Self Care</option>
+                </select>
+            </div>
+            <input type="submit" class="button" id="submit" value="Submit">
+            <input type="reset" class="button" id="reset" value="Reset">
+        </form> 
+        <div id="notification"></div>  
+        <div id="box_for_todo">
+            <!-- <h4 id="task_name_list"> create and add a task name </h4> -->
+            <!-- <date id="due_to_list"> create and add a date </date> -->
+            <!-- <h5>Checklist:</h5> -->
+            <!-- <div id="checklist_list"> -->
+                <!-- <input type="checkbox" id="check" name="check"> -->
+                <!-- <lable for="check"> create each lable and add every checklist data by its position</lable> -->
+            <!-- </div> -->
+            <!-- <h5>Tag:</h5> -->
+            <!-- <p id="tag_list"> ~~<em> create and add a tag </em>~~  </p> -->
+            <!-- <div id="button_list"><button>Complete</button><button>Skip</button></div> -->
+        </div>  
+        
+        <!-- Table where the number of completed and skiped taskes will be add and updated -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Total Completed</th>
+                    <th>Total skiped</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="complete_counter">0</td>
+                    <td id="skip_counter">0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js page/script.js"></script>
+</body>
+</html>
